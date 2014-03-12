@@ -1,0 +1,12 @@
+.class {
+  background: url('asd');
+  background-image: url(asd);
+}
+
+#id
+  background: url("asd"), url(asd), url('/asd');
+
+
+body, html {}
+
+bad!"#!""'

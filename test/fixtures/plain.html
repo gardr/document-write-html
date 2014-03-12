@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="script1.js"></script>
+    <style>
+        body {
+            background: url('asd.png');
+        }
+        html {
+            background: url(./asd.png);
+        }
+        div {
+            background: url('sub/asd.png'), url('../asd2.png');
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="asd.png" />
+        <ul class="" style="background: black url(asd.png);"></ul>
+        <div class=""><div class=""></div></div>
+        <div class=><div class=""></div></div>
+        <ul class=""></ul>
+    </div>
+    <script src="script2.js"></script>
+    <script>/*script3.js*/</script>
+    <style>
+        body {
+            background: url('asd.png');
+        }
+        html {
+            background: url(./asd.png);
+        }
+        div {
+            background: url('sub/asd.png'), url('../asd2.png'), url(asd.png);
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "document-write-html",
+  "version": "0.0.0",
+  "description": "Convert a index.html page into document.writes. Why? Because most ad delivery systems do this - so nice to emulate *bad behaviour* for testing.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "FINN.no AS",
+  "contributors": [
+    "Sveinung Rosaker <sveinung.rosaker@finn.no>"
+  ],
+  "homepage": "https://github.com/gardr/document-write-html",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gardr/document-write-html.git"
+  },
+  "keywords": [
+    "gardr",
+    "iframe",
+    "ads",
+    "third-party"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "htmlparser-to-html": "0.0.5",
+    "css-parse": "^1.7.0",
+    "clean-css": "^2.1.6",
+    "htmlparser2": "^3.5.1",
+    "soupselect": "^0.2.0",
+    "css-stringify": "^1.4.1",
+    "jshint": "^2.4.4"
+  },
+  "devDependencies": {
+    "referee": "^1.0.2",
+    "mocha": "^1.17.1",
+    "coveralls": "^2.8.0",
+    "istanbul": "^0.2.6",
+    "mocha-lcov-reporter": "0.0.1"
+  }
+}
