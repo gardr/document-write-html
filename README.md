@@ -1,4 +1,4 @@
-document-write--html
+document-write-html
 =============
 
 [![Build Status](https://travis-ci.org/gardr/document-write-html.png)](https://travis-ci.org/gardr/document-write-html)

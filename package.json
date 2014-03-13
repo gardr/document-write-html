@@ -28,14 +28,14 @@
     "clean-css": "^2.1.6",
     "htmlparser2": "^3.5.1",
     "soupselect": "^0.2.0",
-    "css-stringify": "^1.4.1",
-    "jshint": "^2.4.4"
+    "css-stringify": "^1.4.1"
   },
   "devDependencies": {
     "referee": "^1.0.2",
     "mocha": "^1.17.1",
     "coveralls": "^2.8.0",
     "istanbul": "^0.2.6",
-    "mocha-lcov-reporter": "0.0.1"
+    "mocha-lcov-reporter": "0.0.1",
+    "jshint": "^2.4.4"
   }
 }
