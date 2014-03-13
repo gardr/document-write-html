@@ -67,12 +67,12 @@ describe('parseAndResolve', function(){
 
 describe('toScriptTag', function(){
 
-    it('should output html page as document write', function(){
-        var content = '<div></div>';
+    it('should output div as document write', function(){
         var base = 'http://www.domain.com/path/';
+        var content = '<base href="'+base+'"><div></div>';
         var output = html.toScriptTag(base, content);
 
-        assert.equals('document.write(\''+content+'\');', output);
+        assert.equals('document.write(\''+content+'\');', output.replace(/\\"/gmi, '"'));
     });
 
     it('should output html-page page as document write', function(){
@@ -81,7 +81,7 @@ describe('toScriptTag', function(){
         var base = 'http://www.domain.com/path/';
         var output = html.toScriptTag(base, content);
 
-        assert.equals('document.write(\''+expected+'\');', output);
+        assert.equals('document.write(\'<base href=\\"'+base+'\\" />'+expected+'\');', output);
     });
 
 });

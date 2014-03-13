@@ -28,7 +28,8 @@
     "clean-css": "^2.1.6",
     "htmlparser2": "^3.5.1",
     "soupselect": "^0.2.0",
-    "css-stringify": "^1.4.1"
+    "css-stringify": "^1.4.1",
+    "CSSselect": "^0.7.0"
   },
   "devDependencies": {
     "referee": "^1.0.2",
