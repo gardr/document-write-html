@@ -10,11 +10,30 @@ function getFixture(n){
 
 describe('toDocumentWrite', function(){
     it('should return document wrapped content', function(){
-        var content = Math.random()*1000;
+        var content = Math.round(Math.random()*123113215435);
         var result = html.toDocumentWrite(content);
         assert.isString(result);
         assert.equals(result.indexOf('document.write('), 0, 'value should start with document:'+result);
-        assert.equals(result.indexOf(');'), result.length-2, 'value should end with \');\'');
+        var end = ');';
+        assert.equals(result.indexOf(end), result.length-end.length, 'value should end with \');\'');
+    });
+
+    it('should wrap with tag', function(){
+        var content = Math.round(Math.random()*10001239123912);
+        var result = html.toDocumentWrite(content, 'div');
+        assert.isString(result);
+        assert.equals(result.indexOf('document.write(\'<div'), 0, 'value should start with document: '+result);
+        var end = '/div>\');';
+        assert.equals(result.indexOf(end), result.length-end.length, 'value should end with \');\'');
+    });
+
+    it('should wrap with script tag and split script tagName', function(){
+        var content = Math.round(Math.random()*10001239123912);
+        var result = html.toDocumentWrite(content, 'script');
+        assert.isString(result);
+        assert.equals(result.indexOf('document.write(\'<scr\'+\'ipt'), 0, 'value should start with document: '+result);
+        var end = '/scr\'+\'ipt>\');';
+        assert.equals(result.indexOf(end), result.length-end.length, 'value should end with \');\'');
     });
 
     var files = ['bad_escape_1.html', 'bad_escape_2.js', 'bad_escape_3.css'];
