@@ -100,7 +100,7 @@ describe('toScriptTag', function(){
         var base = 'http://www.domain.com/path/';
         var output = html.toScriptTag(base, content);
 
-        assert.equals('document.write(\'<base href=\\"'+base+'\\" />'+expected+'\');', output);
+        assert.equals('document.write(\'<base href=\\"'+base+'\\" />\');document.write(\''+expected+'\');', output);
     });
 
 });
