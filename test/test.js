@@ -81,6 +81,17 @@ describe('parseAndResolve', function(){
 
         assert.equals(output.full.match(RE_FIND_ENTRIES).length, 14);
     });
+
+    it('should rewrite urls inside media queries', function(){
+        var content = '<style>'+getFixture('urls.css')+'</style>';
+
+        var rand = Math.round(Math.random()*100012312+Math.random());
+        var base = 'http://www.domain'+rand+'.com/path/';
+        var output = html.parseAndResolve(base, content);
+        var RE_FIND_ENTRIES = new RegExp(rand, 'gm');
+
+        assert.equals(output.full.match(RE_FIND_ENTRIES).length, 4);
+    });
 });
 
 

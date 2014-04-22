@@ -1,0 +1,18 @@
+.first {
+  background: url('first.jpg');
+}
+
+.second {
+  background: black url("second.jpg") no-repeat center center;
+}
+
+.third {
+  background: url(third.jpg) no-repeat;
+}
+
+
+@media all {
+  .fourth {
+    background: url('fourth.jpg') no-repeat;
+  }
+}
