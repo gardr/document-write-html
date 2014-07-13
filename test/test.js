@@ -36,6 +36,15 @@ describe('toDocumentWrite', function(){
         assert.equals(result.indexOf(end), result.length-end.length, 'value should end with \');\'');
     });
 
+    it('should replace quote html entities', function(){
+
+        var content = "document.write(\"fn(&quot;url&quot;)\");";
+        var expected = "document.write('<scr'+'ipt>document.write(\\\"fn(\\\"url\\\")\\\");</scr'+'ipt>');";
+        var result = html.toDocumentWrite(content, 'script');
+        assert.equals(result, expected);
+
+    });
+
     var files = ['bad_escape_1.html', 'bad_escape_2.js', 'bad_escape_3.css'];
     files.forEach(function(fileName){
         it(fileName + ' should produce valid javascript', function(done){
