@@ -23,7 +23,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "htmlparser-to-html": "0.0.5",
     "css-parse": "^1.7.0",
     "clean-css": "^2.1.6",
     "htmlparser2": "^3.5.1",
@@ -37,6 +36,7 @@
     "coveralls": "^2.8.0",
     "istanbul": "^0.2.6",
     "mocha-lcov-reporter": "0.0.1",
-    "jshint": "^2.4.4"
+    "jshint": "^2.4.4",
+    "phantom": "^0.6.5"
   }
 }
