@@ -23,20 +23,20 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "css-parse": "^1.7.0",
-    "clean-css": "^2.1.6",
-    "htmlparser2": "^3.5.1",
+    "css-parse": "^2.0.0",
+    "clean-css": "^2.2.8",
+    "htmlparser2": "^3.7.3",
     "soupselect": "^0.2.0",
-    "css-stringify": "^1.4.1",
+    "css-stringify": "^2.0.0",
     "CSSselect": "^0.7.0"
   },
   "devDependencies": {
-    "referee": "^1.0.2",
-    "mocha": "^1.17.1",
-    "coveralls": "^2.8.0",
-    "istanbul": "^0.2.6",
+    "referee": "^1.0.3",
+    "mocha": "^1.20.1",
+    "coveralls": "^2.11.1",
+    "istanbul": "^0.3.0",
     "mocha-lcov-reporter": "0.0.1",
-    "jshint": "^2.4.4",
+    "jshint": "^2.5.2",
     "phantom": "^0.6.5"
   }
 }
