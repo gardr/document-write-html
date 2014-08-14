@@ -1,6 +1,7 @@
 /* jshint evil: true */
 var referee = require('referee');
 var assert = referee.assert;
+var refute = referee.refute;
 
 var html = require('../lib');
 
@@ -79,6 +80,21 @@ describe('toDocumentWrite', function(){
     });
 });
 
+
+describe('toHtml', function(){
+
+    var toHtml = require('../lib/toHtml.js');
+
+    it('should escape/handle regexp', function(){
+
+        var re = /^((((https?)|(file)):)?\/\/)|(data:)|(\.\.?\/)/i;
+        var inject = {type: 'text', data: 'global.___re = '+re.toString()+';'};
+
+        // todo: too naiv test - to test this properly we need a browser and document.write
+        refute.equals(toHtml(inject, 'script'), inject.data);
+    });
+
+});
 
 describe('parseAndResolve', function(){
 
